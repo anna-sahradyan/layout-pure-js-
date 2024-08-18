@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
+<div class="menu--close .menu--visible"></div>
 <header class="header">
     <div class="container">
         <div class="header__inner">
@@ -28,7 +29,9 @@
                     <span></span>
                 </button>
                 <ul class="menu__list">
-                    <li class="menu_close"><button class="menu_close__btn"><img src="/images/close.svg" alt="close"></button></li>
+                    <li class="menu_close">
+                        <button class="menu_close__btn"><img src="/images/close.svg" alt="close"></button>
+                    </li>
                     <li class="menu__item"><a href="#" class="menu__link">Black</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Green</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">White</a></li>
@@ -40,14 +43,17 @@
 
                             <li class="mobile_menu__item"><a href="#" class="mobile_menu__link">Our Blog</a></li>
 
-                            <li class="mobile_menu__item"><a href="#" class="mobile_menu__link">Shipping and Delivery</a></li>
+                            <li class="mobile_menu__item"><a href="#" class="mobile_menu__link">Shipping and
+                                Delivery</a></li>
 
-                </ul>
+                        </ul>
                         <ul class="mobile_actions">
-                            <li class="mobile_actions__item"><a href="#" class="mobile-actions__link"><img src="images/card.svg"
-                                                                                                       alt="cart"></a></li>
-                            <li class="mobile_actions__item"><a href="#" class="mobile-actions__link"><img src="images/user.svg"
-                                                                                                       alt="user"></a></li>
+                            <li class="mobile_actions__item"><a href="#" class="mobile-actions__link"><img
+                                    src="images/card.svg"
+                                    alt="cart"></a></li>
+                            <li class="mobile_actions__item"><a href="#" class="mobile-actions__link"><img
+                                    src="images/user.svg"
+                                    alt="user"></a></li>
                             <li class="mobile_actions__item ">
                                 <button><img src="/images/search.svg" alt="search"></button>
                             </li>
@@ -88,7 +94,48 @@
         <p class="blockquote__text"> "Tea is not just a drink, it's a way of life and a way to connect with our loved
             ones."</p>
     </blockquote>
+    <section class="assortment">
+        <div class="container">
+            <h2 class="title assortment__title">Explore our Collections</h2>
+            <ul class="assortment__list" id="teaList">
+
+            </ul>
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="container">
+            <h2 class="title">What our Clients say</h2>
+            <ul class="reviews__list" id="reviewsText">
+            </ul>
+        </div>
+    </section>
+    <section class="main__blog">
+        <div class="container">
+            <h2 class="title main__blog">Our Tea Blog</h2>
+            <ul class="main__blog_list">
+            </ul>
+            <a href="#" class="main__blog_btn-link">View all</a>
+        </div>
+    </section>
+    <section class="mailing__list">
+        <h2 class="title mailing_list">
+            Want to know more?
+        </h2>
+        <p class="mailing__list-text">
+            Join our mailing list and stay up-to-date with the latest news, promotions, and exclusive offers from our tea store. Be the first to know about new tea arrivals, seasonal blends, and special discounts. Don't miss out on the tea-rrific perks - sign up today!
+        </p>
+        <form action="" class="mailing__list-form" >
+            <input type="email" class="mailing__list-email" placeholder="name@email.com">
+            <button type="submit" class="mailing__list-btn">Join</button>
+            <label>
+                <input type="checkbox" class="checkbox">
+                <span class="checkbox-style"></span>
+                <p class="checkbox-text">We take your privacy seriously and are committed to protecting your personal information. By subscribing to our mailing list, you are consenting to receive periodic emails from us about our products, promotions, and other tea-related information.</p>
+            </label>
+        </form>
+    </section>
 </main>
+<script src="/js/data.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>
