@@ -46,6 +46,37 @@ const blog = [
     },
 
 ];
+const prioritise = [
+    {
+        desc: 'Complete transparency',
+        img: "/images/garden1.svg",
+        title: 'Single garden teas'
+    },
+    {
+        desc: 'Best Drinking Experience',
+        img: "/images/garden2.svg",
+        title: 'Only Loose leaf tea '
+    }, {
+        desc: 'No bots, no automated replies',
+        img: "/images/headphone.svg",
+        title: 'Customer support'
+    }, {
+        desc: 'Save, Convenient, Reliable',
+        img: "/images/cube.svg",
+        title: 'Fast shipping'
+    }
+
+]
+
+function allPrioritise() {
+    const prioritiseInner = document.querySelector('.prioritise__list');
+    prioritiseInner.innerHTML = prioritise.map((item) => {
+        return  ` <li class="prioritise__item">
+                    <h4 class="prioritise__title">${item.title}</h4>
+                    <p class="prioritise__text">${item.desc}</p>
+                    <img src="${item.img}" alt='prioritise'></li>`
+    }).join('')
+}
 
 function allReviews() {
     const review = document.querySelector('#reviewsText');
@@ -86,5 +117,6 @@ function renderBlogCard() {
 document.addEventListener("DOMContentLoaded", () => {
     allReviews();
     renderTeaItems();
-    renderBlogCard()
+    renderBlogCard();
+    allPrioritise();
 });

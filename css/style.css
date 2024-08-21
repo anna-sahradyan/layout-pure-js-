@@ -34,7 +34,6 @@ ul {
 }
 
 body {
-
     color: var(--bs-black);
     font-size: var(--bs-fs);
     font-family: var(--bs-ffly);
@@ -248,8 +247,24 @@ button {
     font-style: italic;
     margin-bottom: 10px;
 }
-/*main_blog_section*/
 
+/*main_blog_section*/
+.mailing__list {
+    padding: 100px 0;
+    background-color: #F7F2EA;
+    background-image: url("/tea/images/tea.webp");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.mailing_list-title {
+    text-align: left;
+}
+
+.mailing__list__inner {
+    display: flex;
+    gap: 60px 40px;
+}
 
 @media (max-width: 1000px) {
     .header__inner {
