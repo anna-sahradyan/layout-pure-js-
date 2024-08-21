@@ -27,13 +27,13 @@ const blog = [
 
     }, {
         img: "/images/blog-2.webp",
-        title: "Tea Time Travels: Funny Moments from Around the World",
+        title: "Tea-rific Tales: Hilarious Stories from Tea Lovers",
         link: '#',
         author: "by Author Authorius"
 
     }, {
         img: "/images/blog-3.webp",
-        title: "Tea Time Travels: Funny Moments from Around the World",
+        title: "The Role of Tea in Mental Health\n",
         link: '#',
         author: "by Joker"
 
@@ -97,11 +97,11 @@ function renderTeaItems() {
         return `<li class="assortment__item"><img src="${item.img}" alt="${item.title}" class="assortment__img">
                     <p class="assortment__name">${item.title}</p>
                 </li>`;
-    }).join('');
+    }).join(' ');
 }
 
 function renderBlogCard() {
-    const blogList = document.querySelector('.main__blog_list');
+    const blogList = document.querySelector('#blog');
     blogList.innerHTML = blog.map((item) => {
         return `   <li class="main__blog_item">
                     <img src=${item.img} alt="blog-1" class="main__blog_item-img">
@@ -111,7 +111,7 @@ function renderBlogCard() {
                     <a href=${item.link} class="main__blog_item-link">Read</a>
                     </div>
                 </li>`
-    })
+    }).join('')
 }
 
 document.addEventListener("DOMContentLoaded", () => {
