@@ -328,14 +328,128 @@ button {
     background-position: bottom right;
 }
 
-
 .mailing_list-title {
     text-align: left;
+    margin-bottom: 50px;
 }
 
 .mailing__list__inner {
     display: flex;
     gap: 60px 40px;
+}
+
+.mailing__list-text {
+    line-height: 1.5;
+    font-size: 20px;
+    flex-basis: 580px;
+}
+
+.mailing__list-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 580px;
+}
+
+.mailing__list-email {
+    border: none;
+    border-bottom: 1px solid #b7b58b;
+    background-color: transparent;
+    padding: 3px 15px;
+    width: 418px;
+    margin-right: 25px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    font-style: normal;
+    color: var(--bs-black);
+}
+
+.mailing__list-email::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    font-style: normal;
+    color: #b7b58b;
+
+}
+
+.mailing__list-btn {
+    background-color: #fff;
+    border: 1px solid var(--bs-black);
+    font-size: 20px;
+    padding: 12px 41px;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+}
+
+.mailing__list-label {
+    margin-top: 16px;
+
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    padding-left: 20px;
+
+}
+
+.checkbox-style {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--bs-black);
+    margin-top: 5px;
+}
+
+.checkbox-text {
+    font-size: 12px;
+    padding-left: 20px;
+
+}
+
+.checkbox:checked + .checkbox-style::before {
+    content: " ";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #000;
+    top: 1px;
+    left: 1px;
+
+}
+
+/*prioritise*/
+.prioritise {
+    padding: 150px 0;
+}
+
+.prioritise__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 49px;
+    text-align: center;
+}
+
+.prioritise__item {
+
+}
+
+.prioritise__title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.prioritise__text {
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 
 @media (max-width: 1000px) {
