@@ -1,1 +1,3 @@
   li.prioritise__item*4>h4.prioritise__title{$}+p.prioritise__text{$}+img[src=images/pr-$.svg]
+//////////////////////////////////////
+li.partners-logo__logo*4>img[src="images/logo-$@.svg" alt="Logo $"]

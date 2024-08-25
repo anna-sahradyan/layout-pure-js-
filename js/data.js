@@ -67,11 +67,29 @@ const prioritise = [
     }
 
 ]
+const logos = [
+    {
+        img: "/images/images/logo-mast.svg",
 
+    },
+    {
+        img: "/images/images/logo-mast.svg",
+
+    },   {
+        img: "/images/images/logo-mast.svg",
+
+    },   {
+        img: "/images/images/logo-mast.svg",
+
+    },   {
+        img: "/images/images/logo-mast.svg",
+
+    },
+]
 function allPrioritise() {
     const prioritiseInner = document.querySelector('.prioritise__list');
     prioritiseInner.innerHTML = prioritise.map((item) => {
-        return  ` <li class="prioritise__item">
+        return ` <li class="prioritise__item">
                     <h4 class="prioritise__title">${item.title}</h4>
                     <p class="prioritise__text">${item.desc}</p>
                     <img src="${item.img}" alt='prioritise'></li>`
@@ -112,6 +130,10 @@ function renderBlogCard() {
                     </div>
                 </li>`
     }).join('')
+}
+
+function footerLogos() {
+    const footerLogos =document.querySelector('.partners__logo_list')
 }
 
 document.addEventListener("DOMContentLoaded", () => {
