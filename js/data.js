@@ -67,25 +67,7 @@ const prioritise = [
     }
 
 ]
-const logos = [
-    {
-        img: "/images/images/logo-mast.svg",
 
-    },
-    {
-        img: "/images/images/logo-mast.svg",
-
-    },   {
-        img: "/images/images/logo-mast.svg",
-
-    },   {
-        img: "/images/images/logo-mast.svg",
-
-    },   {
-        img: "/images/images/logo-mast.svg",
-
-    },
-]
 function allPrioritise() {
     const prioritiseInner = document.querySelector('.prioritise__list');
     prioritiseInner.innerHTML = prioritise.map((item) => {
@@ -130,10 +112,6 @@ function renderBlogCard() {
                     </div>
                 </li>`
     }).join('')
-}
-
-function footerLogos() {
-    const footerLogos =document.querySelector('.partners__logo_list')
 }
 
 document.addEventListener("DOMContentLoaded", () => {

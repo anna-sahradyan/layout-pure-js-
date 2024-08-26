@@ -1,4 +1,3 @@
-
 html {
     box-sizing: border-box;
 }
@@ -9,6 +8,20 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: inherit;
+}
+
+html, body {
+    height: 100vh;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
 }
 
 a {
@@ -34,12 +47,13 @@ ul {
 }
 
 body {
+    width: 100vw;
     color: var(--bs-black);
     font-size: var(--bs-fs);
     font-family: var(--bs-ffly);
     font-weight: var(--bs-fwt);
     line-height: normal;
-
+    overflow-x: hidden;
 }
 
 .container {
@@ -465,7 +479,9 @@ button {
     gap: 0 40px;
 }
 
-.footer__company-title, .footer__products_title, .footer__contacts-title {
+.footer__company-title,
+.footer__products_title,
+.footer__contacts-title {
     font-weight: 400;
     font-size: 24px;
     font-family: var(--bs--ffly-c);
@@ -473,7 +489,7 @@ button {
 }
 
 .footer__products-item,
-.footer__company-link {
+.footer__company-item {
     margin-bottom: 20px;
 }
 
@@ -562,6 +578,10 @@ button {
     align-items: center;
 }
 
+.partners-logo.master-logo {
+    margin-bottom: -10px;
+}
+
 .footer__social-list {
     display: flex;
     align-items: center;
@@ -569,7 +589,8 @@ button {
     height: 22px;
 
 }
-.footer__social-link{
+
+.footer__social-link {
     display: grid;
 }
 
@@ -802,6 +823,25 @@ button {
         gap: 30px 133px;
     }
 
+    /*footer*/
+    .footer__inner {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr 1fr;
+    }
+
+    .footer__products,
+    .footer__company {
+        grid-row: span 3
+    }
+
+    .footer__contacts {
+        grid-column: 3/4;
+        grid-row: 2/3
+    }
+
+    .footer__copy {
+        margin-right: 120px;
+    }
 }
 
 @media (max-width: 680px) {
@@ -907,6 +947,67 @@ button {
     .mailing__list-btn {
         padding: 8px 30px;
     }
+
+    /*footer*/
+    .footer {
+        padding: 50px 0 10px;
+    }
+
+    .footer__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer__company {
+        padding-right: 20px;
+        margin-right: 55px;
+    }
+
+    .footer__products {
+        margin-right: auto;
+        padding-right: 20px;
+    }
+
+    .footer__company-title,
+    .footer__products_title {
+        margin-bottom: 30px;
+    }
+
+    .footer__blockquote {
+        width: 100%;
+    }
+
+    .footer__blockquote-text {
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+
+    .footer__contacts {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .footer__contacts-title {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .footer__contacts-text {
+        text-align: center;
+    }
+
+    .footer__nav {
+        flex-wrap: nowrap;
+    }
+
+    .footer__social {
+        margin-left: 30px;
+    }
+
+    .footer__copy {
+        margin-right: auto;
+    }
+
 }
 
 
@@ -1030,6 +1131,28 @@ button {
     .prioritise__list {
         gap: 40px 100px;
     }
+
+    /*footer*/
+    .footer__company {
+        padding-right: 15px;
+        margin-right: 0;
+    }
+
+    .footer__products {
+        padding-right: 0;
+    }
+
+    .footer__nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .footer__social {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 
