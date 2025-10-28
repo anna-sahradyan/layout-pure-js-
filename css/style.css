@@ -1135,9 +1135,17 @@ button {
 
 
 @media (max-width: 390px) {
+    /* Общие стили для маленьких экранов */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Header */
     .header__inner {
         padding: 10px 10px;
         justify-content: space-around;
+        min-height: 80px; /* Уменьшаем высоту хедера */
     }
 
     .logo {
@@ -1145,17 +1153,45 @@ button {
         margin-left: 0;
     }
 
+    /* Улучшаем вид кнопки меню */
     .menu__btn {
         margin-left: 10px;
+        width: 30px; /* Немного уменьшаем ширину кнопки */
+        height: 18px; /* Немного уменьшаем высоту кнопки */
     }
 
+    .menu__btn span {
+        height: 2px; /* Убедимся, что линии тонкие */
+    }
+
+    /* Меню */
+    .menu__list {
+        width: 100%; /* Занимает всю ширину */
+        padding-top: 40px; /* Уменьшаем отступ сверху */
+        background-color: var(--bs-white); /* Убедимся, что фон белый */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Добавляем небольшую тень для лучшего разделения */
+    }
+
+    .menu__item {
+        margin-bottom: 20px; /* Уменьшаем расстояние между пунктами */
+        font-size: 20px; /* Немного уменьшаем размер шрифта */
+        line-height: 24px;
+    }
+
+    /* Скрываем действия пользователя на очень маленьких экранах */
+    .user_actions {
+        display: none;
+    }
+
+    /* Top Section */
     .top__inner {
-        min-height: 300px;
+        min-height: 250px; /* Уменьшаем высоту секции */
     }
 
     .top__title {
         font-size: 28px;
         line-height: 1.2;
+        margin-bottom: 15px; /* Уменьшаем отступ */
     }
 
     .top__text {
@@ -1163,6 +1199,7 @@ button {
         margin-bottom: 30px;
     }
 
+    /* Blockquote */
     .blockquote__text {
         max-width: 90%;
         font-size: 18px;
@@ -1171,10 +1208,16 @@ button {
         margin-bottom: 40px;
     }
 
+    /* Title (общий для секций) */
     .title {
         font-size: 28px;
         line-height: 34px;
         margin-bottom: 40px;
+    }
+
+    /* Assortment */
+    .assortment {
+        margin-bottom: 60px;
     }
 
     .assortment__list {
@@ -1188,18 +1231,30 @@ button {
         max-height: 150px;
     }
 
+    /* Reviews */
+    .reviews {
+        padding: 50px 0;
+    }
+
     .reviews__list {
         gap: 20px;
     }
 
     .reviews__item {
         flex-basis: 100%;
-        max-width: 280px;
+        max-width: 280px; /* Ограничиваем ширину элемента отзыва */
+        padding: 0 10px;
     }
 
+    /* Скрываем 3й и 4й отзывы на совсем маленьких экранах */
     .reviews__item:nth-child(3),
     .reviews__item:nth-child(4) {
         display: none;
+    }
+
+    /* Main Blog */
+    .main__blog {
+        padding: 60px 0;
     }
 
     .main__blog_list {
@@ -1207,10 +1262,30 @@ button {
     }
 
     .main__blog_item {
-        max-width: 90%;
+        max-width: 90%; /* Ограничиваем ширину элемента блога */
         margin: 0 auto;
+        display: block; /* Отображаем как блок, чтобы картинка была сверху */
     }
 
+    .main__blog_item-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main__blog-content {
+        padding-top: 15px; /* Отступ между изображением и текстом */
+    }
+
+    .main__blog_item-title {
+        font-size: 20px;
+        min-height: auto;
+    }
+
+    .main__blog_item-link {
+        margin-top: 15px;
+    }
+
+    /* Скрываем каждый второй элемент блога, чтобы не было слишком много контента */
     .main__blog_item:nth-child(even) {
         display: none;
     }
@@ -1222,6 +1297,7 @@ button {
         margin-top: 40px;
     }
 
+    /* Mailing List */
     .mailing__list {
         padding: 40px 0;
         background-size: 60px auto; /* Уменьшаем размер фонового изображения */
@@ -1229,9 +1305,165 @@ button {
 
     .mailing_list-title {
         margin-bottom: 30px;
+        font-size: 30px; /* Уменьшаем размер заголовка */
+    }
+
+    .mailing__list-text {
+        flex-basis: 100%;
+        font-size: 16px; /* Уменьшаем размер шрифта текста */
+        line-height: 1.4;
+    }
+
+    .mailing__list__inner {
+        gap: 30px 0;
     }
 
     .mailing__list-email {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+        font-size: 16px; /* Уменьшаем размер шрифта инпута */
+    }
+
+    .mailing__list-email::placeholder {
         font-size: 16px;
     }
+
+    .mailing__list-btn {
+        padding: 8px 30px;
+        font-size: 18px;
     }
+
+    .mailing__list-label {
+        margin-top: 10px;
+    }
+
+    /* Prioritise */
+    .prioritise {
+        padding: 60px 0; /* Уменьшаем отступы */
+    }
+
+    .prioritise__list {
+        flex-direction: column; /* Элементы в колонку */
+        gap: 30px;
+    }
+
+    .prioritise__item {
+        width: 100%; /* Занимает всю доступную ширину */
+        max-width: 280px; /* Ограничиваем ширину */
+        margin: 0 auto; /* Центрируем */
+    }
+
+    .prioritise__title {
+        font-size: 24px; /* Уменьшаем размер заголовка */
+    }
+
+    .prioritise__text {
+        font-size: 14px; /* Уменьшаем размер текста */
+    }
+
+    /* Footer */
+    .footer {
+        padding: 50px 0 10px;
+    }
+
+    .footer__inner {
+        display: flex;
+        flex-direction: column; /* Элементы в колонку */
+        gap: 30px 0; /* Уменьшаем расстояние между элементами */
+        margin-bottom: 40px;
+    }
+
+    .footer__company,
+    .footer__products,
+    .footer__blockquote,
+    .footer__contacts {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer__company-title,
+    .footer__products_title,
+    .footer__contacts-title {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .footer__company-item,
+    .footer__products-item {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .footer__blockquote-text {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .footer__blockquote-author {
+        font-size: 11px;
+    }
+
+    .footer__contacts-text {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .footer__nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .footer__nav-logo {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    .footer__nav-email,
+    .footer__nav-phone {
+        margin-bottom: 10px;
+        font-size: 12px;
+        padding-left: 25px;
+    }
+
+    .footer__nav-email::before,
+    .footer__nav-phone::before {
+        width: 18px;
+        height: 14px;
+        top: 0;
+    }
+    .footer__nav-phone::before {
+        width: 17px;
+        height: 17px;
+    }
+
+    .footer__social {
+        margin: 20px auto 0;
+    }
+
+    .footer__social-list {
+        gap: 0 15px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer__copy {
+        margin-right: 0;
+        font-size: 14px;
+    }
+
+    .partners__logo_list {
+        gap: 0 10px;
+    }
+
+    .partners-logo img {
+        height: 16px;
+    }
+}
